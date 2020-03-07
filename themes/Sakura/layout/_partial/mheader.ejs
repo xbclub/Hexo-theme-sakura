@@ -1,0 +1,39 @@
+<div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="<%- (theme.cdn || '') + theme.avatar%>">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px"><%- theme.prefixName%><%- theme.siteName%></p>
+  <p style="text-align: center; word-spacing: 20px;">
+    <% if (theme.msocial) {%>
+      <% for (var i in theme.msocial) {%>
+        <a href="<%- theme.msocial[i].url%>" class="fa <%- theme.msocial[i].fa%>" target="_blank" style="color: #<%- theme.msocial[i].color%>; margin-left:20px"></a>
+      <% } %>
+    <% } %>
+  </p>
+  <ul id="menu-new-1" class="menu">
+    <% for (var menu in theme.menus){ %>
+      <li>
+        <a href="<%- url_for(theme.menus[menu].path) %>">
+          <span class="faa-parent animated-hover">
+            <i class="fa  <%= theme.menus[menu].fa %>" aria-hidden="true"></i>
+            <%= menu %>
+          </span>
+        </a>
+        <% if (theme.menus[menu].submenus) { %>
+          <ul class="sub-menu">
+            <% for (var submenu in theme.menus[menu].submenus){ %>
+              <li>
+                <a href="<%- url_for(theme.menus[menu].submenus[submenu].path) %>">
+                  <i class="fa <%= theme.menus[menu].submenus[submenu].fa %>" aria-hidden="true"></i>
+                  <%= submenu %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        <% } %>
+      </li>
+    <% } %>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>

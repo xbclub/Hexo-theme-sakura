@@ -1,0 +1,32 @@
+<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="<%- url_for(post.path) %>">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
+        </div>
+        <img width="150" height="150" src="<%= post.photos[0] %>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="<%- url_for(post.path) %>">
+    <%= post.title %></a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    <%= date(post.date, 'YYYY-M-D') %></div>
+    <p>
+    <%= post.description %></p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="<%- url_for(post.path) %>">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>

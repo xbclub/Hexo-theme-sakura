@@ -1,0 +1,26 @@
+<%- partial('_partial/head') %>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <%- partial('_partial/headertop', null, {cache: !config.relative_link}) %>
+    <div id="page" class="site wrapper">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <%- body %>
+    </div>    
+    <%- partial('_widget/search/insight') %>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <%- partial('_partial/mheader', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/aplayer', null, {cache: !config.relative_link}) %>
+</body>
+</html>
