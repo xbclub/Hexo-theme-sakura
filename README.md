@@ -15,21 +15,27 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
 
 
 ## 主题特性
-
- - 首页大屏视频
- - 首页随机封面
- - 图片懒加载
- - valine评论
- - fancy-box相册
- - pjax支持，音乐不间断
- - aplayer音乐播放器
- - 多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）
+ - 二次开发特性
+    - 原有特性的基础上添加了开关
+    - 添加了seo优化选项
+    - 升级原始hexo版本 从3.9.0 升级到 4.2.0
+    - 优化静态资源
+    - 加快页面访问
+    - 自动生成sitemap（google:sitmap.xml;百度：baidusitemap.xml)
+ - 原有主题特性
+    - 首页大屏视频
+    - 首页随机封面
+    - 图片懒加载
+    - valine评论
+    - fancy-box相册
+    - pjax支持，音乐不间断
+    - aplayer音乐播放器
+    - 多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）
 
 
 ## 赞赏作者
-如果喜欢hexo-theme-sakura主题，可以考虑资助一下哦~非常感激！
+如果喜欢hexo-theme-sakura主题，请给个star哦~
 
-[paypal](https://www.paypal.me/hojuncn) | [Alipay 支付宝](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg) | [WeChat Pay 微信支付](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg)
 
 ## 未完善的使用教程
 
@@ -37,7 +43,7 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
 
 ## 1、主题下载安装
 
-[hexo-theme-sakura](https://github.com/honjun/hexo-theme-sakura)建议下载压缩包格式，因为除了主题内容还有些source的配置对新手来说比较太麻烦，直接下载解压就省去这些麻烦咯。
+[Hexo-theme-sakura](https://github.com/xbclub/Hexo-theme-sakura)建议下载压缩包格式，因为除了主题内容还有些source的配置对新手来说比较太麻烦，直接下载解压就省去这些麻烦咯。
 
 下载好后解压到博客根目录（不是主题目录哦，重复的选择替换）。接着在命令行（cmd、bash）运行`npm i`安装依赖。
 
