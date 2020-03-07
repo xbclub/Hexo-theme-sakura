@@ -1,17 +1,13 @@
-hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
+hexo-theme-sakura主题 
 
+基于Hexo主题[Sakura](https://github.com/honjun/hexo-theme-sakura/)二次开发优化而成。
 基于WordPress主题[Sakura](https://github.com/mashirozx/Sakura/)修改成Hexo的主题。
 
-[demo预览](https://sakura.hojun.cn)
+[demo预览](https://42cloud.cn)
 
-正在开发中......
+如有问题欢迎添加issue
 
 ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
-
-## 交流群
-若你是使用者，加群QQ: 801511924
-
-若你是创作者，加群QQ: 194472590
 
 
 ## 主题特性

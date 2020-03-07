@@ -15,38 +15,40 @@ keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png
 ---
-hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
+hexo-theme-sakura主题 
 
+基于Hexo主题[Sakura](https://github.com/honjun/hexo-theme-sakura/)二次开发优化而成。
 基于WordPress主题[Sakura](https://github.com/mashirozx/Sakura/)修改成Hexo的主题。
 
-[demo预览](https://sakura.hojun.cn)
+[demo预览](https://42cloud.cn)
 
-正在开发中......
+如有问题欢迎添加issue
 
 ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
 
-## 交流群
-若你是使用者，加群QQ: 801511924
-
-若你是创作者，加群QQ: 194472590
-
 
 ## 主题特性
-
- - 首页大屏视频
- - 首页随机封面
- - 图片懒加载
- - valine评论
- - fancy-box相册
- - pjax支持，音乐不间断
- - aplayer音乐播放器
- - 多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）
+ - 二次开发特性
+    - 原有特性的基础上添加了开关
+    - 添加了seo优化选项
+    - 升级原始hexo版本 从3.9.0 升级到 4.2.0
+    - 优化静态资源
+    - 加快页面访问
+    - 自动生成sitemap（google:sitmap.xml;百度：baidusitemap.xml)
+ - 原有主题特性
+    - 首页大屏视频
+    - 首页随机封面
+    - 图片懒加载
+    - valine评论
+    - fancy-box相册
+    - pjax支持，音乐不间断
+    - aplayer音乐播放器
+    - 多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）
 
 
 ## 赞赏作者
-如果喜欢hexo-theme-sakura主题，可以考虑资助一下哦~非常感激！
+如果喜欢hexo-theme-sakura主题，请给个star哦~
 
-[paypal](https://www.paypal.me/hojuncn) | [Alipay 支付宝](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg) | [WeChat Pay 微信支付](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg)
 
 ## 未完善的使用教程
 
@@ -54,7 +56,7 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
 
 ## 1、主题下载安装
 
-[hexo-theme-sakura](https://github.com/honjun/hexo-theme-sakura)建议下载压缩包格式，因为除了主题内容还有些source的配置对新手来说比较太麻烦，直接下载解压就省去这些麻烦咯。
+[Hexo-theme-sakura](https://github.com/xbclub/Hexo-theme-sakura)建议下载压缩包格式，因为除了主题内容还有些source的配置对新手来说比较太麻烦，直接下载解压就省去这些麻烦咯。
 
 下载好后解压到博客根目录（不是主题目录哦，重复的选择替换）。接着在命令行（cmd、bash）运行`npm i`安装依赖。
 
@@ -390,3 +392,47 @@ hexo-tag-fancybox_img用来在文章或单页面中图片，使用语法如下�
 ## 还有啥，一时想不起来......
 
 To be continued...
+
+
+## 2019.6.1追加
+一直没时间更新readme，六一更新如下
+
+### zoom放大图片
+
+关于zoom点击放大图片功能，一直就有，不过readme里头没说明。
+修改Sakura\node_modules\marked\lib\marked.js的Renderer.prototype.image方法为
+```js
+Renderer.prototype.image = function(href, title, text) {
+  if (this.options.baseUrl && !originIndependentUrl.test(href)) {
+    href = resolveUrl(this.options.baseUrl, href);
+  }
+  var out = '<img data-action="zoom" src="' + href + '" alt="' + text + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += this.options.xhtml ? '/>' : '>';
+  return out;
+};
+```
+即可
+
+### 关闭公告
+
+配置公告为空或false，表示关闭公告
+notice: false
+
+### 动态配置aplayer
+```yml
+aplayer: 
+  id: 2660651585
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: auto
+  volume: 0.7
+  mutex: true
+```
+aplayer配置可以自己自定义参数，且都会渲染出来，不局限于以上内容。参考aplayer文档添加参数或拿来实现自己一些特殊功能
