@@ -1,4 +1,4 @@
-hexo-theme-sakura主题 
+hexo-theme-sakura主题
 
 基于Hexo主题[Sakura](https://github.com/honjun/hexo-theme-sakura/)二次开发优化而成。
 基于WordPress主题[Sakura](https://github.com/mashirozx/Sakura/)修改成Hexo的主题。
@@ -63,7 +63,7 @@ timezone:
 ```yml
 deploy:
   type: git
-  repo: 
+  repo:
     github: 你的github仓库地址
     # coding: 你的coding仓库地址
   branch: master
@@ -157,7 +157,7 @@ bgn: 8
 
 # startdash面板 url, title, desc img 【改】
 # startdash url, title, desc img
-startdash: 
+startdash:
   - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
   - {url: https://space.bilibili.com/29403222, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
   - {url: /, title: 42cloud的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
@@ -217,10 +217,6 @@ v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 busuanzi:
   switch: false
 
-#文章目录自动生成 switch是显示开关（true：开启，false：关闭）
-mulu:
-  switch: true
-
 ```
 
 ## 分类页和标签页配置
@@ -236,7 +232,7 @@ mulu:
 # 按分类名创建
 技术:
     #中文标题
-    zh: 野生技术协会 
+    zh: 野生技术协会
     # 英文标题
     en: Geek – Only for Love
     # 封面图片
@@ -262,7 +258,7 @@ mulu:
 title: comment
 date: 2018-12-20 23:13:48
 keywords: 留言板
-description: 
+description:
 comments: true
 # 在这里配置单页面头部图片，自定义替换哦~
 photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg
@@ -316,16 +312,16 @@ bangumis:
 layout: links
 title: links
 # 创建日期，可以改下
-date: 2018-12-19 23:11:06 
+date: 2018-12-19 23:11:06
 # 图片上的标题，自定义修改
-keywords: 友人帐 
-description: 
+keywords: 友人帐
+description:
 # true/false 开启/关闭评论
-comments: true 
+comments: true
 # 页面头部图片，自定义修改
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg 
+photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg
 # 友链配置
-links: 
+links:
   # 类型分组
   - group: 个人项目
     # 类型简介
@@ -406,7 +402,7 @@ notice: false
 
 ### 动态配置aplayer
 ```yml
-aplayer: 
+aplayer:
   id: 2660651585
   server: netease
   type: playlist

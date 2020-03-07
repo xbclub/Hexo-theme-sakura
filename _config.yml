@@ -81,7 +81,6 @@ deploy:
   type: git
   repo: 
     github: git@github.com:xbclub/hexo-back.git
-    github-token: 3efa5823141b9126b94305dd972ba67c7a19bdad
     # github: https://github.com/honjun/honjun.github.io.git
     #coding: https://github.com/xbclub/hexo-back.git
   branch: master
