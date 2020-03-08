@@ -8,10 +8,10 @@
 如有问题欢迎添加issue
 
 # 升级注意事项
-    - 备份2个_config.yml和1个zh-cn.yml
-    - 下载新的压缩包
-    - 覆盖旧版本
-    - 把备份的_config.yml和zh-cn.yml重新填入新的_config.yml与zh-cn.yml（不要覆盖，要对应填入）
+   - 备份2个_config.yml和1个zh-cn.yml
+   - 下载新的压缩包
+   - 覆盖旧版本
+   - 把备份的_config.yml和zh-cn.yml重新填入新的_config.yml与zh-cn.yml（不要覆盖，要对应填入）
 
 ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
 
