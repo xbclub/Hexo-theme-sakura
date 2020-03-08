@@ -38,6 +38,8 @@ menus:
   友人帐: { path: /links/, fa: fa-link faa-shake }
   RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
 
+#页脚信息
+pagefooter: 这里是页脚信息
 
 # Home page sort type: -1: newer first，1: older first.
 homePageSortType: -1

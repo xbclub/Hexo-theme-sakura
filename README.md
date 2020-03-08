@@ -1,4 +1,4 @@
-hexo-theme-sakura主题
+# hexo-theme-sakura主题
 
 基于Hexo主题[Sakura](https://github.com/honjun/hexo-theme-sakura/)二次开发优化而成。
 基于WordPress主题[Sakura](https://github.com/mashirozx/Sakura/)修改成Hexo的主题。
@@ -7,11 +7,18 @@ hexo-theme-sakura主题
 
 如有问题欢迎添加issue
 
+# 升级注意事项
+    - 备份2个_config.yml和1个zh-cn.yml
+    - 下载新的压缩包
+    - 覆盖旧版本
+    - 把备份的_config.yml和zh-cn.yml重新填入新的_config.yml与zh-cn.yml（不要覆盖，要对应填入）
+
 ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
 
 
 ## 主题特性
  - 二次开发特性
+    - 增加页脚信息修改选项
     - 原有特性的基础上添加了开关
     - 添加了seo优化选项
     - 升级原始hexo版本 从3.9.0 升级到 4.2.0
