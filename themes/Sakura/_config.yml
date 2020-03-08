@@ -112,7 +112,6 @@ aplayer:
   mutex: true
 
 # Valine
-valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 
