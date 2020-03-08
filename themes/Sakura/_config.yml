@@ -66,8 +66,10 @@ startdash:
   - {url: /, title: 42cloud的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
 
 
-# your site build time or founded date
-siteBuildingTime: 07/17/2018
+# your site build time or founded date (建站日期）
+siteBuildingTime: 2020-1-24
+#页脚显示网站已运行时间
+runtime: true
 
 #social  url, img PC端配置
 social:
@@ -122,3 +124,6 @@ busuanzi:
 #文章目录自动生成
 mulu:
   switch: true
+
+#每日一言
+hitokoto: true
