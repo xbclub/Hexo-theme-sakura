@@ -179,12 +179,13 @@ function imgError (ele, type) {
       ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/default_gavatar.jpg'
       break
     case 3:
-
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+      var bgindex = Math.floor(Math.random()*bg.length)
+      ele.src = bg[bgindex]
       break
     default:
       ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
   }
+    console.log('%c Github %c', 'background:#24272A; color:#ffffff', '', ele.src)
 }
 mashiro_global.post_list_show_animation = new function () {
   this.ini = function (ajax) {
@@ -1546,8 +1547,8 @@ $(function () {
       Siren.VA()
       Siren.MJ()
       Siren.AB()
-      //Siren.TOC()
-      // Siren.BSZ()
+      Siren.TOC()
+      Siren.BSZ()
       if (mashiro_option.NProgressON) NProgress.done()
       mashiro_global.ini.pjax()
       $('#loading').fadeOut(500)

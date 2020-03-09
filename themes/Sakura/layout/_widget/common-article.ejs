@@ -4,8 +4,9 @@
 <% if (post.photos && post.photos.length){ %>
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(<%= post.photos[0] %>);" src="<%- theme.lazyloadImg%>" data-src="<%= post.photos[0] %>">
-    </div>
+    <div class="pattern-attachment-img">
+        <img src="<%- theme.lazyloadImg%>" data-src="<%= post.photos[0] %>" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
       <%- post.title %></h1>
@@ -117,7 +118,7 @@
       </section>
       <%- partial('_partial/comment') %>
       <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="<%- post.authorLink %>" class="profile gravatar"><img src="<%- post.avatar%>" itemprop="image" alt="<%- post.author %>" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
