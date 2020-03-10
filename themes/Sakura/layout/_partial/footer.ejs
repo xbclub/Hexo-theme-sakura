@@ -136,7 +136,7 @@
         }
 
         function momxc() {
-            var birthDay = NewDate("2020-1-24");
+            var birthDay = NewDate("<%= theme.siteBuildingTime %>");
             var today = new Date();
             var timeold = today.getTime() - birthDay.getTime();
             var sectimeold = timeold / 1000
