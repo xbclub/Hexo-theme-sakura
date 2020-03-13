@@ -13,6 +13,9 @@
    - 覆盖旧版本
    - 把备份的_config.yml和zh-cn.yml重新填入新的_config.yml与zh-cn.yml（不要覆盖，要对应填入）
 # 更新日志
+  - 2020-3-13 （本次更新需要替换主题的_config.yml）
+    - 增加42cloud 阅读计数器
+    - 修改页脚信息支持html标记
   - 2020-3-9
     - https replace (同步 honjun/hexo-theme-sakura 更新）
     - 添加 文章页，首页文章列表，分类，标签等页面未设置特色图时使用主页背景图
@@ -230,10 +233,15 @@ valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 
+#42cloud 计数器
+readcounts: true
+
 #不蒜子计数器 switch是显示开关（true：开启，false：关闭）
 busuanzi:
   switch: false
 
+#每日一言
+hitokoto: true
 ```
 
 ## 分类页和标签页配置

@@ -21,11 +21,14 @@
         </span>
         <span class="bull">
         ·</span>
-        <%= date(post.date, 'YYYY-M-D') %><span class="bull">
-        ·</span>
+        <%= date(post.date, 'YYYY-M-D') %>
         <% if(theme.busuanzi.switch){%>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+          ·<span id="busuanzi_value_page_pv"></span>次阅读
       <%}%>
+      <% if(theme.readcounts){%>
+        ·<span id="readcount"></span>次阅读
+      <%}%>
+      </p>
     </header>
   </div>
 <% } %>
@@ -38,8 +41,14 @@
         <% if (!post.photos[0]){ %>
           <header class="entry-header">
             <h1 class="entry-title"><%- post.title %></h1>
-            <p class="entry-census"><%- post.author %>&nbsp;·&nbsp;<%= date(post.date, 'YYYY-M-D') %>&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
+            <p class="entry-census"><%- post.author %>&nbsp;·&nbsp;<%= date(post.date, 'YYYY-M-D') %>&nbsp;
+              <% if(theme.busuanzi.switch){%>
+              ·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读
+            <%}%>
+                    <% if(theme.readcounts){%>
+        ·<span id="readcount"></span>次阅读
+      <%}%>
+            </p>
             <hr>
           </header>
         <% } %>
@@ -140,3 +149,14 @@
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   </script>
 <% } %>
+
+      <% if(theme.readcounts){%>
+       <script>
+  fetch('https://counts.42cloud.cn/api/counts.html')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("readcount").innerHTML=data.Count;
+        })
+        .catch(err => console.error(err))
+</script>
+      <%}%>
