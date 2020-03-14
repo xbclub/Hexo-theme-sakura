@@ -1048,7 +1048,17 @@ var home = location.href,
   s = $('#bgvideo')[0],
   Siren = {
     BSZ: function() {
-      $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+    fetch('https://counts.42cloud.cn/api/counts.html')
+        .then(response => response.json())
+        .then(data => {
+              if (document.getElementById("readcount")) {
+                document.getElementById("readcount").innerHTML=data.Count;
+            }
+            if (document.getElementById("allcount")){
+                document.getElementById("allcount").innerHTML=data.Allcount;
+            }
+        })
+        .catch(err => console.error(err))
     },
     TOC: function () {
       if ($('.toc').length > 0 && document.body.clientWidth > 1200) {
@@ -1086,7 +1096,6 @@ var home = location.href,
             $('.toc').removeClass('toc-fixed')
           }
         }
-        $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
       }
     },
     AB: function () {
