@@ -1,0 +1,54 @@
+  <div class="pattern-center-blank"></div>
+  <% if (post.photos && post.photos.length){ %>
+    <div class="pattern-center ">
+      <div class="pattern-attachment-img">
+        <img src="<%- theme.lazyloadImg%>" data-src="<%= post.photos %>" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      </div>
+      <header class="pattern-header ">
+        <h1 class="entry-title">
+        <%= post.keywords %></h1>
+      </header>
+    </div>
+  <% } %>
+  <div id="content" class="site-content">
+    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
+      <%- post.content %>
+      <!-- .entry-content -->
+      <%- partial('_partial/comment') %>
+      <div class="single-reward">
+        <div class="reward-open">赏
+          <div class="reward-main">
+            <ul class="reward-row">
+              <li class="alipay-code"><img src="<%- (theme.cdn || '') + theme.donate.alipay%>"></li>
+              <li class="wechat-code"><img src="<%- (theme.cdn || '') + theme.donate.wechat%>"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+      <footer class="post-footer">
+        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+        <div class="post-tags">
+        </div>
+        <div class="post-share">
+          <div class="social-share sharehidden share-component"></div>
+          <i class="iconfont show-share icon-forward"></i>
+        </div>
+      </footer><!-- .entry-footer -->
+    </article>
+      <!-- #post-## -->
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="/about/" class="profile gravatar"><img src="<%- (theme.cdn || '') + theme.avatar%>" itemprop="image" alt="<%- theme.siteName %>" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="<%- theme.url%>" itemprop="url" rel="author"><%- theme.siteName %></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i><%- theme.description%></p>
+      </section>
+  </div><!-- #primary -->
+</div>

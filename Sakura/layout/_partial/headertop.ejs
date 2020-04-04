@@ -1,0 +1,73 @@
+<div class="headertop <%- theme.bgclass %>">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="<%- theme.url%>">
+          <img src="<%- (theme.cdn || '') + theme.avatar %>">
+        </a>
+      </div>
+      <div class="header-info">
+        <p><%= theme.description %></p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          <% if (theme.social) {%>
+            <% for (i in theme.social) {%>
+              <% if (theme.social[i].qrcode) {%>
+                <li class="wechat">
+                  <a href="<%= theme.social[i].url%>">
+                    <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="<%- (theme.cdn || '') + theme.social[i].qrcode%>">
+                  </div>
+                </li>
+              <% } else { %>
+                <li>
+                  <a href="<%= theme.social[i].url%>" target="_blank" class="social-github" title="<%- i %>">
+                    <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
+                  </a>
+                </li>
+              <% } %>
+            <% } %>
+          <% } %>
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <% if (!theme.movies.switch){%>
+  <div id="video-container" style="display: none;">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu" >
+    </div>
+  </div>
+  <%}else {%>
+    <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <%}%>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
