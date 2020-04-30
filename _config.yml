@@ -130,3 +130,6 @@ hitokoto: true
 
 #全站灰白主题
 gray: false
+
+#剪贴板版权
+clipboards: false
