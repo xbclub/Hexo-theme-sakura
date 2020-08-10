@@ -1,3 +1,5 @@
+# 主题demo
+[本主题Demo预览](https://blog.42cloud.cn)
 # 使用文档
 - [中文文档&DOCS](https://docs.42cloud.cn/sakura/#/)
 
